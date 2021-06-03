@@ -24,11 +24,9 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
+import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
 
-class Editor extends ClassicEditor {}
-
-// Plugins to include in the build.
-Editor.builtinPlugins = [
+const plugins = [
 	Alignment,
 	Autoformat,
 	BlockQuote,
@@ -52,9 +50,7 @@ Editor.builtinPlugins = [
 	HorizontalLine,
 ];
 
-
-// Editor configuration.
-Editor.defaultConfig = {
+const config = {
 	toolbar: {
 		items: [
 			'heading',
@@ -74,4 +70,14 @@ Editor.defaultConfig = {
 	},
 };
 
-export default Editor;
+class HtmlEditor extends ClassicEditor {}
+
+HtmlEditor.builtinPlugins = plugins;
+HtmlEditor.defaultConfig = config;
+
+class MarkdownEditor extends ClassicEditor {}
+
+MarkdownEditor.builtinPlugins = [...plugins, Markdown];
+MarkdownEditor.defaultConfig = config;
+
+export default { HtmlEditor, MarkdownEditor };
