@@ -59,6 +59,7 @@ ClassicEditor.builtinPlugins = [
 	TextTransformation
 ];
 
+
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
