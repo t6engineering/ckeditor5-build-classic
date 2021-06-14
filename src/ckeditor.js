@@ -15,6 +15,7 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -25,8 +26,10 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
+import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 
 const plugins = [
+	Mention,
 	Alignment,
 	Autoformat,
 	BlockQuote,
@@ -39,6 +42,7 @@ const plugins = [
 	ImageStyle,
 	ImageToolbar,
 	Indent,
+	IndentBlock,
 	Italic,
 	Link,
 	List,
