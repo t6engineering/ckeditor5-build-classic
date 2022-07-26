@@ -3,6 +3,8 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
+import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
+import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
@@ -27,10 +29,16 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
+import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
+import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 
 const plugins = [
 	Mention,
 	Alignment,
+	UploadAdapter,
+	CKFinder,
+	Base64UploadAdapter,
 	Autoformat,
 	BlockQuote,
 	Bold,
@@ -41,6 +49,7 @@ const plugins = [
 	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
+	ImageUpload,
 	Indent,
 	IndentBlock,
 	Italic,
@@ -52,6 +61,7 @@ const plugins = [
 	TableToolbar,
 	TextTransformation,
 	HorizontalLine,
+	MediaEmbed,
 ];
 
 const config = {
