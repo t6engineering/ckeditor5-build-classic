@@ -31,14 +31,12 @@ import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
-import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 
 const plugins = [
 	Mention,
 	Alignment,
 	UploadAdapter,
 	CKFinder,
-	Base64UploadAdapter,
 	Autoformat,
 	BlockQuote,
 	Bold,
