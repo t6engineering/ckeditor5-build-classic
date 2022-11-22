@@ -31,6 +31,8 @@ import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
+import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
+
 
 const plugins = [
 	Mention,
@@ -60,6 +62,7 @@ const plugins = [
 	TextTransformation,
 	HorizontalLine,
 	MediaEmbed,
+	GeneralHtmlSupport
 ];
 
 const config = {
