@@ -32,6 +32,7 @@ import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
+import { HtmlComment } from "@ckeditor/ckeditor5-html-support";
 
 
 const plugins = [
@@ -62,7 +63,8 @@ const plugins = [
 	TextTransformation,
 	HorizontalLine,
 	MediaEmbed,
-	GeneralHtmlSupport
+	GeneralHtmlSupport,
+  	HtmlComment,
 ];
 
 const config = {
