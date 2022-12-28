@@ -33,6 +33,7 @@ import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
 import { HtmlComment } from "@ckeditor/ckeditor5-html-support";
+import WidgetContainer from "./plugins/email/WidgetContainer";
 
 
 const plugins = [
@@ -65,6 +66,7 @@ const plugins = [
 	MediaEmbed,
 	GeneralHtmlSupport,
   	HtmlComment,
+  	WidgetContainer,
 ];
 
 const config = {
