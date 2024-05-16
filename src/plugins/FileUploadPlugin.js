@@ -17,8 +17,14 @@ export default class FileUploadPlugin extends Plugin {
 
 			// When a file is selected
 			view.on('done', async (evt, files) => {
+				if (!files.length) {
+					return;
+				}
+
+				const file = files[0];
+				const fileName = file.name;
 				const fileRepository = editor.plugins.get(FileRepository);
-				const fileLoader = fileRepository.createLoader(files[0]);
+				const fileLoader = fileRepository.createLoader(file);
 
 				if (!fileLoader) {
 					return;
@@ -27,11 +33,7 @@ export default class FileUploadPlugin extends Plugin {
 				fileLoader
 					.upload()
 					.then((data) => {
-
-						console.log(files);
-
 						const url = data.default;
-						const fileName = files[0].name;
 						const linkHtml = `<a href="${url}" target="_blank">${fileName}</a>`;
 						editor.model.change((writer) => {
 							editor.model.insertContent(writer.createText(linkHtml), editor.model.document.selection);
