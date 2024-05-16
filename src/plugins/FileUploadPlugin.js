@@ -27,6 +27,9 @@ export default class FileUploadPlugin extends Plugin {
 				fileLoader
 					.upload()
 					.then((data) => {
+
+						console.log(files);
+
 						const url = data.default;
 						const fileName = files[0].name;
 						const linkHtml = `<a href="${url}" target="_blank">${fileName}</a>`;
