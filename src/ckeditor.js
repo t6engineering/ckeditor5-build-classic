@@ -2,7 +2,6 @@
  * @license Copyright (c) 2014-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
-import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
@@ -33,10 +32,9 @@ import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
-import { HtmlComment } from "@ckeditor/ckeditor5-html-support";
+import {HtmlComment} from "@ckeditor/ckeditor5-html-support";
 import WidgetContainer from "./plugins/email/WidgetContainer";
-import {ButtonView} from "@ckeditor/ckeditor5-ui";
-import {FileDialogButtonView} from "@ckeditor/ckeditor5-upload";
+import FileUploadPlugin from "./plugins/FileUploadPlugin";
 
 
 const plugins = [
@@ -102,4 +100,4 @@ class MarkdownEditor extends ClassicEditor {}
 MarkdownEditor.builtinPlugins = [...plugins, Markdown];
 MarkdownEditor.defaultConfig = config;
 
-export default { HtmlEditor, MarkdownEditor, ButtonView, FileDialogButtonView, Plugin };
+export default { HtmlEditor, MarkdownEditor, FileUploadPlugin };
