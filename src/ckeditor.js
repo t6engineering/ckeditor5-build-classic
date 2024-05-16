@@ -68,6 +68,7 @@ const plugins = [
 	GeneralHtmlSupport,
   	HtmlComment,
   	WidgetContainer,
+	FileUploadPlugin,
 ];
 
 const config = {
