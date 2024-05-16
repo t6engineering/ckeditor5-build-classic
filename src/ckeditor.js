@@ -2,6 +2,7 @@
  * @license Copyright (c) 2014-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
+import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
@@ -101,4 +102,4 @@ class MarkdownEditor extends ClassicEditor {}
 MarkdownEditor.builtinPlugins = [...plugins, Markdown];
 MarkdownEditor.defaultConfig = config;
 
-export default { HtmlEditor, MarkdownEditor, ButtonView, FileDialogButtonView };
+export default { HtmlEditor, MarkdownEditor, ButtonView, FileDialogButtonView, Plugin };
