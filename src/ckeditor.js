@@ -34,6 +34,8 @@ import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport';
 import { HtmlComment } from "@ckeditor/ckeditor5-html-support";
 import WidgetContainer from "./plugins/email/WidgetContainer";
+import {ButtonView} from "@ckeditor/ckeditor5-ui";
+import {FileDialogButtonView} from "@ckeditor/ckeditor5-upload";
 
 
 const plugins = [
@@ -99,4 +101,4 @@ class MarkdownEditor extends ClassicEditor {}
 MarkdownEditor.builtinPlugins = [...plugins, Markdown];
 MarkdownEditor.defaultConfig = config;
 
-export default { HtmlEditor, MarkdownEditor };
+export default { HtmlEditor, MarkdownEditor, ButtonView, FileDialogButtonView };
