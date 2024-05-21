@@ -35,7 +35,6 @@ import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtml
 import {HtmlComment} from "@ckeditor/ckeditor5-html-support";
 import WidgetContainer from "./plugins/email/WidgetContainer";
 import FileUploadPlugin from "./plugins/FileUploadPlugin";
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 
 
 
@@ -71,7 +70,6 @@ const plugins = [
   	HtmlComment,
   	WidgetContainer,
 	FileUploadPlugin,
-	SourceEditing,
 ];
 
 const config = {

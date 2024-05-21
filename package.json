@@ -47,8 +47,5 @@
   },
   "scripts": {
     "build": "webpack --mode production"
-  },
-  "dependencies": {
-    "@ckeditor/ckeditor5-source-editing": "^41.4.2"
   }
 }
