@@ -41,7 +41,7 @@ export default class FileUploadPlugin extends Plugin {
 								linkTarget: '_blank'
 							};
 
-							writer.insertText(fileName, linkAttributes, editor.model.document.selection);
+							writer.insertText(fileName, linkAttributes, editor.model.document.selection.getFirstPosition());
 						});
 					})
 					.catch((error) => {
