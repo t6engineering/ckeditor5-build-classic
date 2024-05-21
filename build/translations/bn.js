@@ -1,0 +1,1 @@
+!function(n){const o=n.bn=n.bn||{};o.dictionary=Object.assign(o.dictionary||{},{"Show source":"উৎস দেখান",Source:"উৎস"}),o.getPluralForm=function(n){return 1!=n}}(window.CKEDITOR_TRANSLATIONS||(window.CKEDITOR_TRANSLATIONS={}));

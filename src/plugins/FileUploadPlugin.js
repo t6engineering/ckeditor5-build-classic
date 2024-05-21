@@ -36,9 +36,13 @@ export default class FileUploadPlugin extends Plugin {
 						const url = data.default;
 						const linkHtml = `<a href="${url}" target="_blank">${fileName}</a>`;
 						editor.model.change((writer) => {
-							const linkElement = writer.createElement('link', { href: url, target: '_blank' });
-							writer.insertText(fileName, linkElement);
-							editor.model.insertContent(linkElement, editor.model.document.selection);						});
+							const linkAttributes = {
+								linkHref: url,
+								linkTarget: '_blank'
+							};
+
+							writer.insertText(fileName, linkAttributes, editor.model.document.selection);
+						});
 					})
 					.catch((error) => {
 						console.error('File upload failed:', error);
