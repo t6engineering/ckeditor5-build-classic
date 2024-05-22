@@ -35,13 +35,12 @@ export default class FileUploadPlugin extends Plugin {
 					.then((data) => {
 						const url = data.default;
 						editor.model.change((writer) => {
-							const linkElement = writer.createElement('link', {
+							const linkAttributes = {
 								linkHref: url,
 								linkTarget: '_blank'
-							});
+							};
 
-							editor.model.insertContent(linkElement, editor.model.document.selection.getFirstPosition());
-							writer.insertText(fileName, linkElement);
+							writer.insertText(fileName, linkAttributes, editor.model.document.selection.getFirstPosition());
 						});
 					})
 					.catch((error) => {
