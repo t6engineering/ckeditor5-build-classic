@@ -35,7 +35,14 @@ import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtml
 import {HtmlComment} from "@ckeditor/ckeditor5-html-support";
 import WidgetContainer from "./plugins/email/WidgetContainer";
 import FileUploadPlugin from "./plugins/FileUploadPlugin";
-
+import {
+	ImageInsert,
+	ImageResizeButtons,
+	ImageResizeEditing,
+	ImageResizeHandles,
+	ImageTextAlternative
+} from "@ckeditor/ckeditor5-image";
+import {LinkImage} from "@ckeditor/ckeditor5-link";
 
 
 const plugins = [
@@ -54,6 +61,12 @@ const plugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	ImageResizeEditing,
+	ImageResizeHandles,
+	ImageResizeButtons,
+	ImageTextAlternative,
+	ImageInsert,
+	LinkImage,
 	Indent,
 	IndentBlock,
 	Italic,
@@ -67,8 +80,8 @@ const plugins = [
 	HorizontalLine,
 	MediaEmbed,
 	GeneralHtmlSupport,
-  	HtmlComment,
-  	WidgetContainer,
+	HtmlComment,
+	WidgetContainer,
 	FileUploadPlugin,
 ];
 
@@ -92,14 +105,16 @@ const config = {
 	},
 };
 
-class HtmlEditor extends ClassicEditor {}
+class HtmlEditor extends ClassicEditor {
+}
 
 HtmlEditor.builtinPlugins = plugins;
 HtmlEditor.defaultConfig = config;
 
-class MarkdownEditor extends ClassicEditor {}
+class MarkdownEditor extends ClassicEditor {
+}
 
 MarkdownEditor.builtinPlugins = [...plugins, Markdown];
 MarkdownEditor.defaultConfig = config;
 
-export default { HtmlEditor, MarkdownEditor, FileUploadPlugin };
+export default {HtmlEditor, MarkdownEditor, FileUploadPlugin};
