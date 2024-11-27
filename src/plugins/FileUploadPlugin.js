@@ -1,4 +1,5 @@
-import {FileDialogButtonView, FileRepository} from "@ckeditor/ckeditor5-upload";
+import { FileDialogButtonView } from '@ckeditor/ckeditor5-ui';
+import { FileRepository } from '@ckeditor/ckeditor5-upload';
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 
 export default class FileUploadPlugin extends Plugin {
@@ -37,7 +38,7 @@ export default class FileUploadPlugin extends Plugin {
 						editor.model.change((writer) => {
 							const linkAttributes = {
 								linkHref: url,
-								linkTarget: '_blank'
+								linkTarget: '_blank',
 							};
 
 							writer.insertText(fileName, linkAttributes, editor.model.document.selection.getFirstPosition());
